@@ -1,3 +1,9 @@
+xfce4-weather-plugin (0.8.9-1~jessie1) unstable; urgency=medium
+
+  * Backported to jessie.
+
+ -- fsmithred <fsmithred@gmail.com>  Thu, 25 May 2017 20:35:00 -0400
+
 xfce4-weather-plugin (0.8.9-1) unstable; urgency=medium
 
   * New upstream release.
