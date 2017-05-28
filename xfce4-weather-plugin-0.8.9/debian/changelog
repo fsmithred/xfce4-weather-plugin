@@ -1,0 +1,366 @@
+xfce4-weather-plugin (0.8.9-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 18 Feb 2017 16:05:43 +0100
+
+xfce4-weather-plugin (0.8.8-1) unstable; urgency=medium
+
+  [ Mateusz Łukasik ]
+  * New upstream release. 
+    - Drop 01_update-yr.no-url.patch -- included upstream.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 18 Sep 2016 11:34:12 +0200
+
+xfce4-weather-plugin (0.8.7-3) unstable; urgency=medium
+
+  * debian/patches:
+    - fix obvious typo in 01_update-yr.no-url.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 29 Aug 2016 16:30:09 +0200
+
+xfce4-weather-plugin (0.8.7-2) unstable; urgency=medium
+
+  * debian/patches:
+    - 01_update-yr.no-url added, update API url for Yr.no serice.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 29 Aug 2016 14:14:18 +0200
+
+xfce4-weather-plugin (0.8.7-1) unstable; urgency=medium
+
+  [ Mateusz Łukasik ]
+  * New upstream release. (Closes: #774101)
+  * debian/control:
+    - Bump standards version to 3.9.8.
+    - Use secured link for Vcs-Browser.
+  * debian/watch:
+    - Bump to version 4.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 28 Jun 2016 22:09:54 +0200
+
+xfce4-weather-plugin (0.8.6-1) unstable; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream release
+    - Remove negative sign when temperature is rounded to 0 °F. Closes: #778800
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 28 Jun 2015 14:05:30 +0200
+
+xfce4-weather-plugin (0.8.5-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 06 May 2015 23:06:11 +0200
+
+xfce4-weather-plugin (0.8.5-1) experimental; urgency=medium
+
+  * New upstream release.
+  * debian/patches: all patches removed since they're included upstream
+  * debian/control:
+    - add build-dep on dh-autoreconf
+  * debian/rules:
+    - use autoreconf dh addon instead of manually handling files.
+  * debian/copyright updated
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 13 Mar 2015 22:32:31 +0100
+
+xfce4-weather-plugin (0.8.3-2) unstable; urgency=low
+
+  [ Yves-Alexis Perez ]
+  * debian/copyright updated.
+  * debian/control:
+    - update standards version to 3.9.6.
+
+  [ Evgeni Golov ]
+  * Correct Vcs-* URLs to point to anonscm.debian.org
+
+  [ Jackson Doak ]
+  * Add patches from upstream git to use locationforcast-1.2
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 05 Oct 2014 15:22:17 +0200
+
+xfce4-weather-plugin (0.8.3-1) unstable; urgency=low
+
+  [ Yves-Alexis Perez ]
+  * Upload to unstable.
+  * New upstream release.
+  * debian/rules:
+    - enable all hardening rules.
+  * debian/control:
+    - add build-dep on libsoup2.4-dev.
+
+  [ Lionel Le Folgoc ]
+  * debian/patches:
+    - 01_link-libm.patch: added, fix build
+    - 02_fix-color-parsing.patch: added, load the saved color from the config
+    - 03_fix-panel-icon-size.patch: added, fix cut off panel icon.
+  * debian/control: add b-deps on xfce4-dev-tools, automake, autoconf and
+    libtool, needed by xdt-autogen.
+  * debian/rules: run xdt-autogen and clean up afterwards due to the libm build
+    fix.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 22 May 2013 20:24:24 +0200
+
+xfce4-weather-plugin (0.8.2-1) experimental; urgency=low
+
+  [ Lionel Le Folgoc ]
+  * debian/patches: add missing DEP3 headers.
+  * New upstream release.
+  * debian/control: switch to libxfce4ui-1-dev (ported upstream).
+  * debian/patches:
+    - 00_license.patch: dropped, upstream changed the forecast provider.
+  * debian/rules: fix rule to remove la files.
+
+  [ Yves-Alexis Perez ]
+  * debian/rules:
+    - add --parallel to dh calls.
+  * debian/control:
+    - update standards version to 3.9.3.
+    - add Lionel to uploaders.
+    - update debhelper build-dep to 9. 
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Sun, 07 Oct 2012 14:56:41 +0200
+
+xfce4-weather-plugin (0.7.4-3) unstable; urgency=low
+
+  * Brown paper bag release.
+  * debian/patches/series added, so the patch is really applied.closes: #647749
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Fri, 18 Nov 2011 10:48:51 +0100
+
+xfce4-weather-plugin (0.7.4-2) unstable; urgency=low
+
+  * debian/patches:
+    - 00_license added, change the license key for the one from CTW since it
+      seems to work and brings back the feature. Temporary fix until a real
+      solution is found.                                        closes: #647749
+  * debian/rules:
+    - switch to debhelper with hardening support
+  * debian/control:
+    - update debhelper build-dep to 8.9.4 for hardening support.
+    - add dpkg-dev 1.16.1 build-dep for hardening support.
+    - drop cdbs and hardening-includes.
+    - fix typo in long description.
+  * debian/compat bumped to 9.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 16 Nov 2011 22:48:59 +0100
+
+xfce4-weather-plugin (0.7.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - add build dep on libxfcegui4-dev.
+    - update standards version to 3.9.2.
+    - add build-dep on hardening-includes.
+    - remove Emanuele and Simon from uploaders, thanks to them.
+    - bump Xfce build-deps to 4.8.
+  * Switch to 3.0 (quilt) source format.
+  * debian/rules:
+    - pick {C,LD}FLAGS from dpkg-buildflags.
+    - add -O1, -z,defs and --as-needed to LDFLAGS.
+    - add hardening flags to {C,LD}FLAGS.
+  * debian/patches:
+    - 01_support-ipv6-only-proxies dropped, included upstream.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 20 Apr 2011 10:27:02 +0200
+
+xfce4-weather-plugin (0.7.3-3) unstable; urgency=low
+
+  * debian/patches:
+    - 01_support-ipv6-only-proxies added, fix support for proxies with only
+      IPv6 addresses. Thanks Roman Mamedov.                     closes: #579972
+  * debian/control:
+    - update standards version to 3.8.4.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 04 May 2010 08:46:43 +0200
+
+xfce4-weather-plugin (0.7.3-2) unstable; urgency=low
+
+  * debian/rules:
+    - drop useless removal of config.status, fix ftbfs.         closes: #564361
+  * debian/control:
+    - update standards version to 3.8.3.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 09 Jan 2010 15:50:19 +0100
+
+xfce4-weather-plugin (0.7.3-1) unstable; urgency=low
+
+  * debian/watch edited to track Xfce archive reorganisation.
+  * New upstream release.
+  * debian/patches:
+    - 01_fix-cache-folder-permissions dropped, merged upstream.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 04 Aug 2009 22:33:38 +0200
+
+xfce4-weather-plugin (0.7.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches:
+    - 01_fix-cache-folder-permissions added, fix permissions on the cache
+      folder.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Mon, 03 Aug 2009 15:11:16 +0200
+
+xfce4-weather-plugin (0.7.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 21 Jul 2009 19:44:39 +0200
+
+xfce4-weather-plugin (0.7.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - update standards version to 3.8.2.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 24 Jun 2009 08:37:55 +0200
+
+xfce4-weather-plugin (0.6.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: and update the copyright holders.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 16 Jun 2009 22:05:22 +0200
+
+xfce4-weather-plugin (0.6.3-1) unstable; urgency=low
+
+  [ Yves-Alexis Perez ]
+  * New upstream release.
+    - display an icon even when there's no report.              closes: #510215
+  * debian/control:
+    - add build-dep on intltool.
+    - drop versionned build-dep on xfce4-panel, 4.4 is everywhere now.
+  * debian/patches:
+    - 01_fix-local-encodings dropped, included upstream.
+    - 02_correct-orientation too.
+    - 03_use-gtk-2.12-api too.
+    - 04_handle-network-config-changes as well.
+
+  [ Evgeni Golov ]
+  * Fix Vcs-* fields, they were missing 'trunk' in the path.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 14 Jun 2009 11:19:43 +0200
+
+xfce4-weather-plugin (0.6.2-3) unstable; urgency=low
+
+  * debian/control:
+    - update standards version to 3.8.1.
+    - switch to xfce section.
+  * debian/patches:
+    - 02_correct-orientation added, use panel orientation to display text
+      more legibly.
+    - 03_use-gtk-2.12-api added, prettify tooltips using gtk 2.12 API.
+    - 04_handle-network-config-changes added, correctly handle network
+      reconfiguration.
+  * debian/rules:
+    - -Wl,-z,defs -Wl,--as-needed added to LDFLAGS.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 09 Jun 2009 22:31:18 +0200
+
+xfce4-weather-plugin (0.6.2-2) unstable; urgency=low
+
+  * debian/patches:
+    - 01_fix-local-encodings added. Fix issues with non UTF8 encodings of
+    dates.                                                      closes: #483952
+  * debian/control:
+    - remove Rudy Godoy and Martin Loschwitz from Uploaders.
+    - update standards version to 3.8.0.
+    - add dep on ${misc:Depends}.
+    - bump debhelper build-dep to 7.
+  * debian/compat: bump to 7.
+   
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 10 Mar 2009 07:41:10 +0100
+
+xfce4-weather-plugin (0.6.2-1) unstable; urgency=low
+
+  [ Simon Huggins ]
+  * debian/control: Move fake Homepage field to a real one now dpkg
+    supports it.
+  * Add Vcs-* headers to debian/control
+
+  [ Yves-Alexis Perez ]
+  * New upstream release.
+  * debian/control:
+    - updated standard versions to 3.7.3.
+    - updated my email to the debian.org one.
+  * debian/copyright: updated copyrights, authors and license.
+  * debian/NEWS: remove tab at beginning of lines. 
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sat, 08 Dec 2007 19:28:17 +0100
+
+xfce4-weather-plugin (0.6.0-1) unstable; urgency=low
+
+  (Yves-Alexis Perez)
+  * New upstream release.
+  * debian/control:
+   - removed Jani from uploaders as he's not anymore in the team.
+   - removed gtk from build-dep as it's pulled by xfce4-panel-dev anyway.
+
+  (Stefan Ott)
+  * debian/control: updated the url
+
+  (Simon Huggins)
+  * Build against latest and greatest xfce.
+
+ -- Yves-Alexis Perez <corsac@corsac.net>  Mon, 16 Apr 2007 18:56:13 +0100
+
+xfce4-weather-plugin (0.5.99.1-2) unstable; urgency=low
+
+  * debian/control: bumped xfce4-panel build-dep to 4.4rc1 to fix FTBFS. 
+
+ -- Yves-Alexis Perez <corsac@corsac.net>  Fri, 29 Sep 2006 12:14:42 +0100
+
+xfce4-weather-plugin (0.5.99.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix crash when xfce-mcs-manager is refreshed.		Closes: #381925
+
+ -- Yves-Alexis Perez <corsac@corsac.net>  Sat, 23 Sep 2006 15:41:49 +0100
+
+xfce4-weather-plugin (0.5-2) unstable; urgency=low
+
+  * Updated build-deps to 4.3.90.2 (Xfce 4.4 Beta2).
+  * Updated standards version to 3.7.2.
+
+ -- Yves-Alexis Perez <corsac@corsac.net>  Wed, 26 Jul 2006 15:06:32 +0100
+
+xfce4-weather-plugin (0.5-1) unstable; urgency=low
+
+  * (Yves-Alexis Perez)
+    * New upstream release
+    * Add build-depends on >= 4.3.90.1
+    * Removed explicit dependency on xfce4-panel (managed by shlibs)
+  * (Simon Huggins)
+    * Set Standard policy version to 3.6.2
+
+ -- Yves-Alexis Perez <corsac@corsac.net>  Wed, 03 May 2006 19:17:15 +0100
+
+xfce4-weather-plugin (0.4.9-2) unstable; urgency=low
+
+  * Rebuilding to fix libxfcegui dependency (Closes: #315447)
+  * Moving to unstable
+
+ -- Emanuele Rocca <ema@debian.org>  Mon, 20 Jun 2005 21:28:42 +0200
+
+xfce4-weather-plugin (0.4.9-1) experimental; urgency=low
+  
+  * New upstream release
+
+ -- Emanuele Rocca <ema@debian.org>  Sun, 17 Apr 2005 19:38:26 +0200
+
+xfce4-weather-plugin (0.4.1-1) experimental; urgency=low
+
+  * New upstream version
+    - Do not hang when closing properties without changes (Closes: #265249)
+  * Added libstartup-notification0-dev to Build-depends
+  * Package adopted by the Debian Xfce Maintainers
+  * Added note about refreshing informations to NEWS.Debian 
+    (Closes: #265250)
+
+ -- Emanuele Rocca <ema@debian.org>  Tue, 29 Mar 2005 15:25:21 +0200
+
+xfce4-weather-plugin (0.3.9-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #258600)
+
+ -- Emanuele Rocca <ema@debian.org>  Sun, 11 Jul 2004 12:09:48 +0200
